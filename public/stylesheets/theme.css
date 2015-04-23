@@ -1,0 +1,27 @@
+/*map is the full screen*/
+#map-canvas {
+	height: 100vh;
+	width : 100%;
+	padding: 0px;
+}
+
+/*pin list is at the right end of the screen*/
+#info_column{
+	position : absolute;
+	top: 0px;
+	right : 0%;
+	height : 100vh;
+	opacity: 0.8;
+	background-color:#E6E6E6;
+	overflow-y:scroll;
+}
+
+/* make sure that all the letters in the form input is black (so that users can see) */
+form > *{
+	color: black !important;
+}
+
+input {
+	width : inherit;
+	background-color : #fff;
+}

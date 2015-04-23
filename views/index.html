@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template & jquery links-->
+    <link href="/stylesheets/theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/animate.css">
+
+    <title> Pin @ Brown </title>
+  </head>
+
+  <body>
+  <!-- Headline -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header" style="background-color:#2EFE64; width:200px">
+        <a class="navbar-brand"> <b>PIN @ Brown </b></a>
+    </div>
+  </nav>
+
+    <!-- map demonstration and data loading part -->
+      <div id="map-canvas"></div>
+      <div id="info_column">
+        <center><p class = "animated infinite tada" style = "margin-top : 50px; font-size:25px"><b>Pin List</b></p><center>
+          <div id="pin_data" style = "width : 500px">
+          <!-- parts here will be added dynamically with jquery at map.js -->
+          </div>
+      </div>
+
+    <!-- data inserting part -->
+    <div id = "dataInsert" style = "background-image : url(/images/background.jpg); background-size:100% 100%; padding-top:50px; padding-left : 100px">
+    <strong> <h3 class = "animated infinite bounce" style = "color : black"> <b> Add your story to the map ! </b></h3> </strong>
+    </br>
+      <div style = "padding-left : 100px"> 
+       <form style = "height : 600px;">
+        
+
+        <button id="pinNameButton" type="button" onclick = "createPin()"class="btn btn-primary btn-lg" style = "width:200px;"><b>Name of location</b></button>
+        <input type="name" id="name"  placeholder="name" required autofocus; style = "height : 40px; color:black !important">
+        </br></br>
+
+
+        <button  type="button" class="btn btn-primary btn-lg" style = "width:170px;"><b>latitude</b></button>
+        <input type="latitude" id="latitude"  placeholder="latitude" required; style = "height : 40px; color:black !important">
+        </br></br>
+
+        <button  type="button" class="btn btn-primary btn-lg" style = "width:170px;"><b>longitude</b></button>
+        <input type="longitude" id="longitude"  placeholder="longitude" required; style = "height : 40px; color:black !important"></br></br><br/>
+        
+        <div style='position : relative;' >
+          <button  type="button" class="btn btn-primary btn-lg" style = "width:300px; color: black"><b>Tell us about your story!</b></button>
+          </br></br>
+
+          <textarea name= "bio" id = "description" rows ="8" cols = "50" style="color:black !important">
+          </textarea>
+           
+          <br/><br/><br/>
+
+          <button id="submit-button" type="button" onclick = "createPin()"class="btn btn-primary btn-lg" style = "background-color:#FFBF00; width:400px; color: black"><b>Add your pin to Brown Community!</b></button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="/javascripts/jquery-scrollto.js"></script>
+    <script src="/map.js"></script>
+    <script src="/javascripts/pinData.js"> </script>    
+
+
+  </body>
+</html>
